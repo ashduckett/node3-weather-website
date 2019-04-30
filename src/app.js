@@ -6,6 +6,7 @@ const path = require('path');
 
 // Load the express library
 const express = require('express');
+const port = process.env.PORT || 3000;
 const hbs = require('hbs');
 
 // Create an express application
@@ -115,6 +116,10 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000');
+// app.listen(3000, () => {
+//     console.log('Server is up on port 3000');
+// });
+
+app.listen(port, () => {
+    console.log('Server is up on port ' + port);
 });
